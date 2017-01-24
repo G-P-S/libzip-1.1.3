@@ -1,17 +1,39 @@
-libzip from https://nih.at/libzip/libzip-1.1.3.tar.gz
+This is libzip, a C library for reading, creating, and modifying zip
+archives.  Files can be added from data buffers, files, or compressed
+data copied directly from other zip archives.  Changes made without
+closing the archive can be reverted.  The API is documented by man
+pages.
 
-LICENSE:
+For more information, take a look at the included man pages.  You can
+start with [libzip(3)](http://nih.at/libzip/libzip.html), which lists
+all others.  Example source code is in the `src/` subdirectory.
 
-Copyright (C) 1999-2014 Dieter Baron and Thomas Klausner
+If you have developed an application using libzip, you can find out
+about API changes and how to adapt your code for them in the included
+file `API-CHANGES`.
 
-The authors can be contacted at <libzip@nih.at>
+For generic installation instructions, see file `INSTALL`, which
+describes the approach using autoconf; alternatively, you can
+use cmake to build.
 
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+Additionally, you'll need zlib (at least version 1.1.2). It comes
+with most operating systems nowadays, or you can get it at
+>	http://www.zlib.net/
 
-1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+When using a static Windows library, you need to define `ZIP_STATIC`
+when compiling packages using libzip.
 
-2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+If you make a binary distribution, please include a pointer to the
+distribution site:
+>	http://www.nih.at/libzip/
 
-3. The names of the authors may not be used to endorse or promote products derived from this software without specific prior written permission.
+The latest version can always be found there.
 
-THIS SOFTWARE IS PROVIDED BY THE AUTHORS ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+There is a mailing list for developers using libzip.  You can
+subscribe to it by sending a mail with the subject "subscribe
+libzip-discuss" to minimalist at nih.at. List mail should be sent
+to libzip-discuss at nih.at. Use this for bug reports or questions.
+
+If you want to reach the authors in private, use <libzip@nih.at>.
+
+![Travis Build Status](https://api.travis-ci.org/nih-at/libzip.svg?branch=master)
